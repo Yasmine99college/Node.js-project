@@ -1,0 +1,19 @@
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="iisnode" path="app.js" verb="*" modules="iisnode" />
+    </handlers>
+    <rewrite>
+      <rules>
+        <rule name="Node.js" patternSyntax="ECMAScript" stopProcessing="true">
+          <match url="(.*)" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="app.js" />
+        </rule>
+      </rules>
+    </rewrite>
+    <iisnode nodeProcessCommandLine="node.exe" />
+  </system.webServer>
+</configuration>
