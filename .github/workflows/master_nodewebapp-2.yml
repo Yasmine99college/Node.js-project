@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: '18.x'
 
-
       - name: npm install and build
         run: |
           npm install
@@ -54,5 +53,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F6E7B7EE12D84C7FB63B5D02EC45F5FD }}
           package: .
-          - name: npm test
-        run: npm test -- --passWithNoTests
