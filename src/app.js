@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 async function connectToMongoDB() {
     try {
 
-        await mongoose.connect('mongodb+srv://user1:123@atlascluster.ehnugvt.mongodb.net/?retryWrites=true&w=majority', {
+        await mongoose.connect('mongodb+srv://user1:123@atlascluster.ehnugvt.mongodb.net/questions-topics?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
@@ -26,7 +26,7 @@ app.get('/search', async (req, res) => {
     try {
         const { q } = req.query;
         const topics = await Topic.find().exec();
-
+        console.log(topics);
         const matchingTopics = topics.filter((topic) => {
             const level1Match = topic['Topic Level 1'] && topic['Topic Level 1'].includes(q);
             const level2Match = topic['Topic Level 2'] && topic['Topic Level 2'].includes(q);
