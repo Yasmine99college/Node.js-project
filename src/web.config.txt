@@ -8,7 +8,7 @@
         <rule name="Node.js App" patternSyntax="ECMAScript" stopProcessing="true">
           <match url="/*" />
           <conditions logicalGrouping="MatchAll" />
-          <action type="Rewrite" url="app.js" />
+          <action type="Rewrite" url="src/app.js" />
         </rule>
       </rules>
     </rewrite>
