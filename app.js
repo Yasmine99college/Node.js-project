@@ -15,8 +15,8 @@ async function connectToMongoDB() {
 }
 
 connectToMongoDB();
-const Question = require('./question');
-const Topic = require('./topics');
+const Question = require('./src/question');
+const Topic = require('./src/topics');
 
 
 const app = express();
