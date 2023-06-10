@@ -11,7 +11,7 @@ node app.js
 <img width="535" alt="image" src="https://github.com/Yasmine99college/Node.js-project/assets/48599728/40a0722d-95f7-4633-a6be-bc105ad11b3a">
 
 # The domain after deployment 
-[node src\app.js](https://nodewebapp-2.azurewebsites.net/)
+(https://nodewebapp-2.azurewebsites.net/)
 
 # MongoDB Atlas
 The code is deployed on mongodb atlas and the connection string is passed to the code and it works successfully 
